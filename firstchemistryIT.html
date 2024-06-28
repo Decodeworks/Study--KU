@@ -134,6 +134,9 @@
   </div>
 </footer>
 
+<!-- Add an iframe to display the files -->
+<iframe id="fileViewer" style="width: 100%; height: 500px;" frameborder="0"></iframe>
+
 <script type="module">
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
@@ -215,8 +218,8 @@
             result.items.forEach(function(imageRef) {
                 // Get the download URL for each image
                 getDownloadURL(imageRef).then(function(url) {
-                    // Open the image in a new tab
-                    window.open(url, '_blank');
+                    // Display the file in the iframe
+                    document.getElementById('fileViewer').src = url;
         }).catch(function(error) {
           console.error('Error getting download URL: ', error);
         });
