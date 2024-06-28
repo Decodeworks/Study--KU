@@ -22,9 +22,9 @@
                     <i class="fa-solid fa-bars"></i>
                   </label>
                       <ul>
-                        <li> <a href="index.html">HOME</a></li>
-                        <li> <a href="S1subjectsIT.html">SUBJECT</a></li>
-                        <li> <a href="IT.html">SEMESTER</a></li>
+                          <li> <a href="frontpage.html">HOME</a></li>
+                          <li> <a href="IT.html">SUBJECT</a></li>
+                          <li> <a href="S1subjectsECIT">SEMESTER</a></li>
                       </ul>
               </div>
               <div class="logo">
@@ -40,18 +40,18 @@
     <div class="container">
       <div class="top-container">
         <a id="">
-        <div class="card">
+        <div class="card" id="trialButton4">
           <div class="card-body">
             MODULE 1          
           </div>
         </div>        
       </a>
-        <div class="card">
+        <div class="card" id="trialButton5">
           <div class="card-body">
           MODULE 2
           </div>
         </div>
-        <div class="card">
+        <div class="card" id="trialButton6">
           <div class="card-body">
            MODULE 3
           </div>
@@ -61,21 +61,17 @@
         <div class="radial-bottomsilvergradinet"></div>
              
       <div class="bottom-container">          
-      <div class="card">
+      <div class="card" id="trialButton7">
         <div class="card-body">
           MODULE 4
         </div>
       </div>                  
-      <div class="card">
+      <div class="card" id="trialButton8">
         <div class="card-body">
          MODULE 5
         </div>
       </div>         
-      <div class="card">
-        <div class="card-body">
-         MODULE 6
-        </div>
-      </div>      
+         
     </div>
   </div>
 </top-section>
@@ -85,13 +81,13 @@
     <section>
      <div class="container2">
       <div class="top-container2">
-        <div class="card">
+        <div class="card" id="trialButtonqp6">
           <p>2027</P>
         </div>
-        <div class="card">
+        <div class="card" id="trialButtonqp5">
           <p>2026</P>
         </div>
-        <div class="card">
+        <div class="card" id="trialButtonqp4">
           <p>2025</P>
         </div>       
       </div>
@@ -165,6 +161,32 @@
   
       // Initialize Firebase Storage
       const storage = getStorage(app);
+
+      function displayImagesFromModeone(){
+        displayImagesFromFolder('S1/Chemistry/Notes/Module 1')
+      }
+      function displayImagesFromModetwo(){
+        displayImagesFromFolder('S1/Chemistry/Notes/Module 2')
+      }
+      function displayImagesFromModethree(){
+        displayImagesFromFolder('S1/Chemistry/Notes/Module 3')
+      }
+      function displayImagesFromModefour(){
+        displayImagesFromFolder('S1/Chemistry/Notes/Module 4')
+      }
+      function displayImagesFromModefive(){
+        displayImagesFromFolder('S1/Chemistry/Notes/Module 5')
+      }
+
+      function displayImagesFromqpfour() {
+        displayImagesFromFolder('S1/Chemistry/2025');
+      }
+      function displayImagesFromqpfive() {
+        displayImagesFromFolder('S1/Chemistry/2026');
+      }
+      function displayImagesFromqpsix() {
+        displayImagesFromFolder('S1/Chemistry/2027');
+      }
   
       // Function to display images from 'Test' folder
       function displayImagesFromTest() {
@@ -210,6 +232,14 @@
       document.getElementById('trialButton').addEventListener('click', displayImagesFromTest);
       document.getElementById('trialButton2').addEventListener('click', displayImagesFromTrial);
       document.getElementById('trialButton3').addEventListener('click',displayImagesFromNew);
+      document.getElementById('trialButtonqp4').addEventListener('click',displayImagesFromqpfour);
+      document.getElementById('trialButtonqp5').addEventListener('click',displayImagesFromqpfive);
+      document.getElementById('trialButtonqp6').addEventListener('click',displayImagesFromqpsix);
+      document.getElementById('trialButton4').addEventListener('click',displayImagesFromModeone);
+      document.getElementById('trialButton5').addEventListener('click',displayImagesFromModetwo);
+      document.getElementById('trialButton6').addEventListener('click',displayImagesFromModethree);
+      document.getElementById('trialButton7').addEventListener('click',displayImagesFromModefour);
+      document.getElementById('trialButton8').addEventListener('click',displayImagesFromModefive);
       
     </script>
   
